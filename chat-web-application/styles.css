@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    font-family: "Ubuntu Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+strong, b {
+    font-weight: 700;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-image: url("image/background-img.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-wrapper {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#conversation-box {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.20);
+}
+
+#app-title {
+    color: #2F2F2F; 
+    text-shadow: 0px 3px 5px #555555;
+    margin-bottom: 30px;
+}
+
+#msg-txt-field {
+    resize: none;
+}
+
+
+#send-btn-container {
+    width: 80px;
+}
+
+#send-btn {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#message-items-container:empty::before {
+    content: "Conversation box is currently empty";
+    font-size: 12px;
+    font-style: italic;
+    color: #858585;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.message-item {
+    max-width: 85%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+
+.message-item.received {
+    background-image: linear-gradient(120deg, #FEE1B6 0%, #CCE5E3 100%);
+    align-self: flex-start;
+}
+
+.message-item.sent {
+    background-image: linear-gradient(120deg, #EEDEF6 0%, #CCE5E3 100%);
+    align-self: flex-end;
+}
+
+.message-item .sender-name {
+    font-style: italic;
+    font-size: 11px;
+}
+
+.message-item .message-content {
+    font-size: 13px;
+}
