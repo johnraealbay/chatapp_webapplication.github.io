@@ -1,5 +1,5 @@
 // Connect to WebSocket Server
-const chatSocket = new WebSocket("ws://localhost:8080");
+const chatSocket = new WebSocket("ws://localhost:8080"); 
 let isSocketConnected = false;
 
 let user_name = localStorage.getItem("userName") || "";
